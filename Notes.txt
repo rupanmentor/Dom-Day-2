@@ -76,3 +76,63 @@ p1.append(label1,email)
 p2.append(label2,pwd)
 p3.append(label3,pwd1)
 document.body.append(p,p1,p2,p3,button)
+
+// Session task 2 color circle:
+
+function elements(tagname,content,attrname,attrvalue){
+    const res = document.createElement(tagname);
+    res.innerHTML = content;
+    res.setAttribute(attrname,attrvalue);
+    return res;
+}
+
+const division = elements("div","","id","container");
+const red = elements("button","red","type","button");
+const circle = elements("div","","id","circle")
+const green = elements("button","green","type","button");
+const blue = elements("button","blue","type","button");
+const reset = elements("button","reset","type","button");
+
+red.addEventListener("click",()=>{
+  circle.style.backgroundColor = "red";
+})
+green.addEventListener("click",()=>{
+  circle.style.backgroundColor = "green";
+})
+blue.addEventListener("click",()=>{
+  circle.style.backgroundColor = "blue";
+})
+reset.addEventListener("click",()=>{
+  circle.style.backgroundColor = "white";
+})
+
+division.append(circle,red,green,blue,reset)
+document.body.append(division)
+
+
+//session task 3 color circle based on input
+
+    <input type="text" id="input" placeholder="Enter Your Color">
+    <div id="circle"></div>
+
+const circle = document.querySelector("div");
+const input = document.querySelector("#input");
+
+input.addEventListener("change",()=>{
+    console.log(input.value);
+    
+    circle.style.backgroundColor = input.value;
+})
+
+//task 4 :- based on values box should change
+ <input type="text" id="input" placeholder="Enter Your Color/value">
+    <div id="container"></div>
+
+    
+const box = document.querySelector("#container");
+const input = document.querySelector("#input");
+
+input.addEventListener("input",()=>{ 
+    box.style.borderRadius = input.value;
+    box.style.background = input.value;
+})
