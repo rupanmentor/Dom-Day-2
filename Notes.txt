@@ -1,0 +1,20 @@
+ Without using Event listener:- 
+ <p>
+        <label for="email">Enter Your Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter Your Email Id">
+    </p>
+    <button type="submit" onclick="foo()">Check</button>
+   <script>
+     function foo(){
+       const res = document.getElementById("email").value;
+       //console.log(res); 
+    if(res==="test@gmail.com"){
+        alert("You are valid user")
+     }
+     else{
+         alert("You are not valid user")
+     }
+
+     }
+    
+   </script>
